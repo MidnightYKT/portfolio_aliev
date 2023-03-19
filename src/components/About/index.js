@@ -19,13 +19,13 @@ const About = () => {
                         <div>
                             <img src={ImgAboutLaptop} alt="" className="w-full h-full rounded-lg" />
                         </div>
-                        <div className="absolute -right-[10%] -bottom-[12%]">
+                        <div className="absolute -right-[2%] lg:-right-[10%] -bottom-[12%]">
                             <img src={ImgAbout} alt="" className="w-full h-full rounded-lg" />
                         </div>
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={spinTransition}
-                            className="absolute -right-[10%] -bottom-[12%]"
+                            className="absolute -right-[2%] lg:-right-[10%] -bottom-[12%]"
                         >
                             <img src={ImgAboutText} alt="" className="w-full h-full" />
                         </motion.div>

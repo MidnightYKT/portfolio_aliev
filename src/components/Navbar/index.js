@@ -8,8 +8,8 @@ const Navbar = () => {
     }
 
     return (
-        <div className="bg-white sticky top-0 z-40">
-            <div className="mx-auto max-w-[1242px] flex justify-between items-center h-16 text-black font-sans text-lg font-bold lg:px-3 lgx:px-0">
+        <div className="bg-white sticky top-0 z-40 shadow-md">
+            <div className="mx-auto max-w-[1242px] flex justify-between items-center h-16 text-[#2d2e32] font-sans text-lg font-bold lg:px-3 lgx:px-0">
                 <div className="hidden lg:flex">
                     <a href="#Content" className="py-5">
                         Aliev.dev
