@@ -6,6 +6,9 @@ module.exports = {
             screens: {
                 lgb: '1080px',
             },
+            boxShadow: {
+                '3xl': '0 0 10px rgba(0, 0, 0, 0.1)',
+            },
             animation: {
                 wiggle: 'wiggle 20s infinite',
             },

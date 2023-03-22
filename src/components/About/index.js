@@ -13,25 +13,25 @@ const spinTransition = {
 const About = () => {
     return (
         <div className="w-full text-center" id="About">
-            <div className="mx-auto max-w-[1000px] my-20">
-                <div className="p-4 md:p-20 lg:p-0 lg:flex lg:justify-between lg:h-full lg:w-full">
+            <div className="mx-auto max-w-[1000px] my-20 text-[#2d2e32]">
+                <div className="m-4 md:p-20 lg:p-0 lg:flex lg:justify-between lg:h-full lg:w-full">
                     <div className="relative hidden md:block">
                         <div>
                             <img src={ImgAboutLaptop} alt="" className="w-full h-full rounded-lg" />
                         </div>
-                        <div className="absolute -right-[2%] lg:-right-[10%] -bottom-[12%]">
+                        <div className="absolute -right-[4%] lg:-right-[10%] -bottom-[12%]">
                             <img src={ImgAbout} alt="" className="w-full h-full rounded-lg" />
                         </div>
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={spinTransition}
-                            className="absolute -right-[2%] lg:-right-[10%] -bottom-[12%]"
+                            className="absolute -right-[4%] lg:-right-[10%] -bottom-[12%]"
                         >
                             <img src={ImgAboutText} alt="" className="w-full h-full" />
                         </motion.div>
                     </div>
                     <div className="lg:w-[37%] text-left mt-14 lg:mt-0">
-                        <p className="mb-3 font-extrabold text-sm text-blue-700">ABOUT ME</p>
+                        <p className="mb-3 font-extrabold text-sm text-[#147efb]">ABOUT ME</p>
                         <p className="my-3 font-extrabold text-lg">
                             A dedicated Front-end React Developer based in Yakutsk, Russia
                         </p>
