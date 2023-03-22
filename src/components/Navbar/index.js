@@ -11,22 +11,22 @@ const Navbar = () => {
         <div className="bg-white sticky top-0 z-40 shadow-md">
             <div className="mx-auto max-w-[1242px] flex justify-between items-center h-16 text-[#2d2e32] font-sans text-lg font-bold lg:px-3 lgx:px-0">
                 <div className="hidden lg:flex">
-                    <a href="#Content" className="py-5">
+                    <a href="#Home" className="py-5">
                         Aliev.dev
                     </a>
                 </div>
                 <ul className="hidden lg:flex">
                     <li className="p-5">
-                        <a href="#ContentInfo">Home</a>
+                        <a href="#Home">Home</a>
                     </li>
                     <li className="p-5">
-                        <a href="#ContentSecurity">About</a>
+                        <a href="#About">About</a>
                     </li>
                     <li className="p-5">
-                        <a href="#ContentRate">Projects</a>
+                        <a href="#Projects">Projects</a>
                     </li>
                     <li className="p-5">
-                        <a href="#ContentQuestions">Contact</a>
+                        <a href="#Contact">Contact</a>
                     </li>
                 </ul>
                 <div className="ml-4 lg:hidden">Aliev.dev</div>
@@ -41,16 +41,16 @@ const Navbar = () => {
                     }
                 >
                     <li className="p-3 hover:border-b-2 hover:border-[#FFBE41]">
-                        <a href="#ContentInfo">Home</a>
+                        <a href="#Home">Home</a>
                     </li>
                     <li className="p-3 hover:border-b-2 hover:border-[#FFBE41]">
-                        <a href="#ContentSecurity">About</a>
+                        <a href="#About">About</a>
                     </li>
                     <li className="p-3 hover:border-b-2 hover:border-[#FFBE41]">
-                        <a href="#ContentRate">Projects</a>
+                        <a href="#Project">Projects</a>
                     </li>
                     <li className="p-3 hover:border-b-2 hover:border-[#FFBE41]">
-                        <a href="#ContentQuestions">Contact</a>
+                        <a href="#Contact">Contact</a>
                     </li>
                 </ul>
             </div>

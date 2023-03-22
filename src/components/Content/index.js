@@ -17,7 +17,7 @@ const img = [ImgHtml, ImgCss, ImgJavaScript, ImgReact, ImgTailwind, ImgSass, Img
 
 const Content = () => {
     return (
-        <div className="w-full lg:h-screen text-center" id="Content">
+        <div className="w-full lg:h-screen text-center" id="Home">
             <div className="mx-auto max-w-[1000px] text-[#2d2e32]">
                 <div className="mx-4 mb-4 lg:mx-0">
                     <div className="flex flex-col-reverse md:flex-row">
