@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { ImLocation } from 'react-icons/im'
 import { GrMail } from 'react-icons/gr'
 
@@ -16,7 +15,7 @@ const Contact = () => {
                         </span>
                         <div className="ml-3 md:ml-5 mt-2">
                             <p className="font-extrabold">Location</p>
-                            <p className="font-semibold text-gray-600">Yakutsk, Russia</p>
+                            <p className="font-semibold text-gray-600">Seattle, United states</p>
                         </div>
                     </div>
                     <div className="flex w-1/3 h-1/4">

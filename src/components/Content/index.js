@@ -17,7 +17,7 @@ const img = [ImgHtml, ImgCss, ImgJavaScript, ImgReact, ImgTailwind, ImgSass, Img
 
 const Content = () => {
     return (
-        <div className="w-full lg:h-screen text-center" id="Home">
+        <div className="w-full text-center" id="Home">
             <div className="mx-auto max-w-[1000px] text-[#2d2e32]">
                 <div className="mx-4 mb-4 lg:mx-0">
                     <div className="flex flex-col-reverse md:flex-row">
@@ -32,13 +32,25 @@ const Content = () => {
                                             className="w-7 h-7 lg:w-12 lg:h-12 inline lg:ml-3 lg:mb-2"
                                         />
                                     </p>
-                                    <div className="font-semibold text-gray-600 text-lg lg:py-6">
+                                    <div className="font-normal text-gray-600 text-lg lg:mt-6 lg: mb-2">
                                         Hi, I'm Bek Aliev. A dedicated Front-end React Developer
-                                        based in Yakutsk, Russia
+                                        based in Seattle, United states
                                     </div>
                                     <div className="flex justify-start mt-2 md:mt-0">
-                                        <AiFillLinkedin size={40} />
-                                        <AiFillGithub size={40} className="ml-3" />
+                                        <a
+                                            href="https://www.linkedin.com/in/bek-aliev-310a6a26a/"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <AiFillLinkedin size={35} />
+                                        </a>
+                                        <a
+                                            href="https://github.com/MidnightYKT"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <AiFillGithub size={35} className="ml-3" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>

@@ -1,11 +1,12 @@
-import { Navbar, Content, About, Contact, Footer } from './components/index'
+import { Navbar, Content, About, Projects, Contact, Footer } from './components/index'
 
 function App() {
     return (
-        <div>
+        <div className="scrollbar-thin scrollbar-track-white scrollbar-thumb-black h-screen overflow-y-scroll">
             <Navbar />
             <Content />
             <About />
+            <Projects />
             <Contact />
             <Footer />
         </div>

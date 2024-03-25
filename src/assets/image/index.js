@@ -14,6 +14,9 @@ import ImgAbout from '../image/About/imgAbout.png'
 import ImgAboutLaptop from '../image/About/imgAboutLaptop.jpg'
 import ImgAboutText from '../image/About/imgAboutText.png'
 
+//Projects
+import ProjectRamen from '../image/Projects/project_ramen.png'
+
 export {
     ImgAvatar,
     ImgHtml,
@@ -27,4 +30,5 @@ export {
     ImgAbout,
     ImgAboutLaptop,
     ImgAboutText,
+    ProjectRamen,
 }
