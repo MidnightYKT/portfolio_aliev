@@ -2,7 +2,7 @@ import { Navbar, Content, About, Projects, Contact, Footer } from './components/
 
 function App() {
     return (
-        <div className="scrollbar-thin scrollbar-track-white scrollbar-thumb-black h-screen overflow-y-scroll">
+        <div className="">
             <Navbar />
             <Content />
             <About />
@@ -12,5 +12,5 @@ function App() {
         </div>
     )
 }
-
+// scrollbar-thin scrollbar-track-white scrollbar-thumb-black h-screen overflow-y-scroll
 export default App
