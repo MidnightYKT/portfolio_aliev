@@ -4,7 +4,10 @@ import { LuMailSearch } from 'react-icons/lu'
 
 const Contact = () => {
     return (
-        <div className="mx-auto max-w-[1000px] px-2 md:px-0 lg:my-40 text-[#2d2e32]" id="contact">
+        <div
+            className="mx-auto max-w-[1000px] px-2 md:px-0 lg:my-40 text-[#2d2e32] my-11"
+            id="contact"
+        >
             <div className="mx-2 mb-4 lg:mx-0">
                 <p className="mb-3 font-extrabold text-base text-blue-500">CONTACT</p>
                 <p className="mb-3 font-extrabold text-2xl">Don't be shy! Hit me up!</p>

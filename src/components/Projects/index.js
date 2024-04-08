@@ -1,10 +1,8 @@
 import React from 'react'
 
-import { ProjectRamen, ProjectTodo, ProjectWeather, PorjectKanban } from '../../assets/image'
 import { data } from '../../data'
 
 const Projects = () => {
-    console.log(data)
     return (
         <section>
             <div
