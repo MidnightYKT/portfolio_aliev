@@ -92,6 +92,7 @@ const Navbar = () => {
                             to="content"
                             smooth={true}
                             duration={500}
+                            offset={-250}
                             onClick={handleNav}
                         >
                             Home
