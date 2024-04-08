@@ -61,7 +61,7 @@ export const data = [
         id: 2,
         title: 'Kanban React',
         description:
-            'This is my mini online store for ordering ramen. In which I practiced using Redux, Axios, MockaApi and Typescript.',
+            'The Kanban Board React.js application is a dynamic project designed to streamline task management and enhance productivity. Developed with the modern web technology of React.js, this application serves as a visual project management tool.',
         image: PorjectKanban,
         url: 'https://kanban-board-iota-beige.vercel.app/',
         tools: [
