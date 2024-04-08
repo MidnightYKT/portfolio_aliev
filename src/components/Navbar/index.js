@@ -9,12 +9,11 @@ const Navbar = () => {
     }
 
     return (
-        <div className="bg-white sticky top-0 z-40 shadow-md" id="home">
+        <div className="bg-white sticky top-0 z-40 shadow-md" id="bs-example-navbar-collapse-1">
             <div className="mx-auto max-w-[1000px]  px-0 flex justify-between items-center h-16 text-[#2d2e32] font-mono text-lg font-bold md:px-2 lg:px-0">
                 <div className="hidden lg:flex">
                     <Scroll
-                        activeClass="active"
-                        className="cursor-pointer py-4"
+                        className="cursor-pointer py-4 hover:text-blue-700"
                         to="content"
                         smooth={true}
                         duration={500}
@@ -28,11 +27,12 @@ const Navbar = () => {
                         <li className="p-5">
                             <Scroll
                                 activeClass="active"
-                                className="cursor-pointer"
+                                className="cursor-pointer hover:text-blue-700"
                                 to="content"
+                                spy={true}
                                 smooth={true}
+                                offset={-250}
                                 duration={500}
-                                offset={-80}
                             >
                                 Home
                             </Scroll>
@@ -43,8 +43,8 @@ const Navbar = () => {
                                 spy={true}
                                 smooth={true}
                                 duration={500}
-                                offset={-80}
-                                className="cursor-pointer"
+                                offset={-110}
+                                className="cursor-pointer hover:text-blue-700"
                             >
                                 About
                             </Scroll>
@@ -52,10 +52,10 @@ const Navbar = () => {
                         <li className="p-5">
                             <Scroll
                                 to="projects"
-                                className="cursor-pointer"
+                                className="cursor-pointer hover:text-blue-700"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={-80}
                                 duration={500}
                             >
                                 Projects
@@ -67,7 +67,7 @@ const Navbar = () => {
                                 spy={true}
                                 smooth={true}
                                 duration={500}
-                                className="cursor-pointer"
+                                className="cursor-pointer hover:text-blue-700"
                             >
                                 Contact
                             </Scroll>
@@ -85,7 +85,7 @@ const Navbar = () => {
                             : 'ease-in-out text-center w-full h-1/2 duration-500 fixed top-[-100%]'
                     }
                 >
-                    <li className="p-3 hover:border-b-2 hover:border-blue-500">
+                    <li className="p-3 hover:border-blue-500">
                         <Scroll
                             activeClass="active"
                             className="cursor-pointer"
@@ -97,7 +97,7 @@ const Navbar = () => {
                             Home
                         </Scroll>
                     </li>
-                    <li className="p-3 hover:border-b-2 hover:border-blue-500">
+                    <li className="p-3 hover:border-blue-500">
                         <Scroll
                             to="about"
                             spy={true}
@@ -110,7 +110,7 @@ const Navbar = () => {
                             About
                         </Scroll>
                     </li>
-                    <li className="p-3 hover:border-b-2 hover:border-blue-500">
+                    <li className="p-3 hover:border-blue-500">
                         <Scroll
                             to="projects"
                             className="cursor-pointer"
@@ -123,7 +123,7 @@ const Navbar = () => {
                             Projects
                         </Scroll>
                     </li>
-                    <li className="p-3 hover:border-b-2 hover:border-blue-500">
+                    <li className="p-3 hover:border-blue-500">
                         <Scroll
                             to="contact"
                             spy={true}

@@ -8,6 +8,7 @@ import ImgTailwind from '../image/Content/imgTailwind.png'
 import ImgSass from '../image/Content/imgSass.png'
 import ImgAntd from '../image/Content/imgAntd.png'
 import ImgHello from '../image/Content/imgHello.png'
+import ImgRedux from '../image/Content/imgRedux.png'
 
 //About
 import ImgAbout from '../image/About/imgAbout.png'
@@ -16,6 +17,8 @@ import ImgAboutText from '../image/About/imgAboutText.png'
 
 //Projects
 import ProjectRamen from '../image/Projects/project_ramen.png'
+import ProjectWeather from '../image/Projects/weatherReact.png'
+import ProjectTodo from '../image/Projects/todoReact.png'
 
 export {
     ImgAvatar,
@@ -27,8 +30,11 @@ export {
     ImgSass,
     ImgAntd,
     ImgHello,
+    ImgRedux,
     ImgAbout,
     ImgAboutLaptop,
     ImgAboutText,
     ProjectRamen,
+    ProjectWeather,
+    ProjectTodo,
 }
