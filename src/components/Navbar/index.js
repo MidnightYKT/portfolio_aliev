@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineClose, AiOutlineMenu, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { Link as Scroll } from 'react-scroll'
 
 const Navbar = () => {
@@ -135,6 +135,26 @@ const Navbar = () => {
                             Contact
                         </Scroll>
                     </li>
+                    <div className="flex justify-center my-4 md:mt-0">
+                        <a
+                            href="https://www.linkedin.com/in/bek-aliev-310a6a26a/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <AiFillLinkedin
+                                size={40}
+                                onMouseOver={({ target }) => (target.style.color = 'grey')}
+                                onMouseOut={({ target }) => (target.style.color = 'black')}
+                            />
+                        </a>
+                        <a href="https://github.com/MidnightYKT" target="_blank" rel="noreferrer">
+                            <AiFillGithub
+                                size={40}
+                                onMouseOver={({ target }) => (target.style.color = 'grey')}
+                                onMouseOut={({ target }) => (target.style.color = 'black')}
+                            />
+                        </a>
+                    </div>
                 </ul>
             </div>
         </div>
