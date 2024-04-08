@@ -19,6 +19,7 @@ import ImgAboutText from '../image/About/imgAboutText.png'
 import ProjectRamen from '../image/Projects/project_ramen.png'
 import ProjectWeather from '../image/Projects/weatherReact.png'
 import ProjectTodo from '../image/Projects/todoReact.png'
+import PorjectKanban from '../image/Projects/kanbanReact.png'
 
 export {
     ImgAvatar,
@@ -37,4 +38,5 @@ export {
     ProjectRamen,
     ProjectWeather,
     ProjectTodo,
+    PorjectKanban,
 }
