@@ -2,11 +2,24 @@ import { useEffect, useState } from 'react'
 import { Navbar, Content, About, Projects, Contact, Footer } from './components/index'
 
 function App() {
+    const [theme, setTheme] = useState('white')
+    useEffect(() => {
+        if (theme === 'dark') {
+            console.log(theme)
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    }, [theme])
+
+    const handleThemeSwitch = () => {
+        setTheme(theme === 'dark' ? 'white' : 'dark')
+    }
     return (
         <div className="bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white">
-            <Navbar />
+            <Navbar handleThemeSwitch={handleThemeSwitch} />
             <Content />
-            <About />
+            <About theme={theme} />
             <Projects />
             <Contact />
             <Footer />

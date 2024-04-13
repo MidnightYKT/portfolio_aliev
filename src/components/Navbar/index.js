@@ -3,23 +3,10 @@ import { AiOutlineClose, AiOutlineMenu, AiFillGithub, AiFillLinkedin } from 'rea
 import { MdOutlineDarkMode } from 'react-icons/md'
 import { Link as Scroll } from 'react-scroll'
 
-const Navbar = () => {
+const Navbar = ({ handleThemeSwitch }) => {
     const [open, setOpen] = useState(false)
     const handleNav = () => {
         setOpen(!open)
-    }
-    const [theme, setTheme] = useState('white')
-    useEffect(() => {
-        if (theme === 'dark') {
-            console.log(theme)
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    }, [theme])
-
-    const handleThemeSwitch = () => {
-        setTheme(theme === 'dark' ? 'white' : 'dark')
     }
 
     return (

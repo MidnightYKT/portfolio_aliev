@@ -12,9 +12,10 @@ import ImgRedux from '../image/Content/imgRedux.png'
 import ImgFramerMotion from '../image/Content/imgFramerMotion.png'
 
 //About
-import ImgAbout from '../image/About/imgAbout.png'
 import ImgAboutLaptop from '../image/About/imgAboutLaptop.jpg'
 import ImgAboutText from '../image/About/imgAboutText.png'
+import ImgAboutTextDarkMode from '../image/About/imgAboutTextDarkMode.png'
+import ImgEmogi from '../image/About/imgAboutEmogi.png'
 
 //Projects
 import ProjectRamen from '../image/Projects/project_ramen.png'
@@ -33,10 +34,11 @@ export {
     ImgAntd,
     ImgHello,
     ImgRedux,
-    ImgAbout,
+    ImgEmogi,
     ImgFramerMotion,
     ImgAboutLaptop,
     ImgAboutText,
+    ImgAboutTextDarkMode,
     ProjectRamen,
     ProjectWeather,
     ProjectTodo,
