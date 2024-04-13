@@ -12,9 +12,20 @@ import {
     ImgAntd,
     ImgHello,
     ImgRedux,
+    ImgFramerMotion,
 } from '../../assets/image'
 
-const img = [ImgHtml, ImgCss, ImgJavaScript, ImgReact, ImgTailwind, ImgSass, ImgAntd, ImgRedux]
+const img = [
+    ImgHtml,
+    ImgCss,
+    ImgJavaScript,
+    ImgReact,
+    ImgTailwind,
+    ImgSass,
+    ImgAntd,
+    ImgRedux,
+    ImgFramerMotion,
+]
 
 const Content = () => {
     return (

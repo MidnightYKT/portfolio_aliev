@@ -9,6 +9,7 @@ import ImgSass from '../image/Content/imgSass.png'
 import ImgAntd from '../image/Content/imgAntd.png'
 import ImgHello from '../image/Content/imgHello.png'
 import ImgRedux from '../image/Content/imgRedux.png'
+import ImgFramerMotion from '../image/Content/imgFramerMotion.png'
 
 //About
 import ImgAbout from '../image/About/imgAbout.png'
@@ -33,6 +34,7 @@ export {
     ImgHello,
     ImgRedux,
     ImgAbout,
+    ImgFramerMotion,
     ImgAboutLaptop,
     ImgAboutText,
     ProjectRamen,
