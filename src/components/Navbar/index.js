@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { AiOutlineClose, AiOutlineMenu, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { MdOutlineDarkMode } from 'react-icons/md'
 import { Link as Scroll } from 'react-scroll'
 
 const Navbar = () => {
@@ -7,10 +8,23 @@ const Navbar = () => {
     const handleNav = () => {
         setOpen(!open)
     }
+    const [theme, setTheme] = useState('white')
+    useEffect(() => {
+        if (theme === 'dark') {
+            console.log(theme)
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    }, [theme])
+
+    const handleThemeSwitch = () => {
+        setTheme(theme === 'dark' ? 'white' : 'dark')
+    }
 
     return (
-        <div className="bg-white sticky top-0 z-40 shadow-md" id="bs-example-navbar-collapse-1">
-            <div className="mx-auto max-w-[1000px]  px-0 flex justify-between items-center h-16 text-[#2d2e32] font-mono text-lg font-bold md:px-2 lg:px-0">
+        <div className="sticky top-0 z-40 shadow-md" id="bs-example-navbar-collapse-1">
+            <div className="mx-auto max-w-[1000px] bg-white dark:bg-gray-900  px-0 flex justify-between items-center h-16 font-mono text-lg font-bold md:px-2 lg:px-0">
                 <div className="hidden lg:flex">
                     <Scroll
                         className="cursor-pointer py-4 hover:text-blue-700"
@@ -24,6 +38,9 @@ const Navbar = () => {
                 </div>
                 <nav className="navbar">
                     <ul className="hidden lg:flex">
+                        <li className="p-5 cursor-pointer">
+                            <MdOutlineDarkMode size={26} onClick={handleThemeSwitch} />
+                        </li>
                         <li className="p-5">
                             <Scroll
                                 activeClass="active"
@@ -74,14 +91,14 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </nav>
-                <div className="ml-4 lg:hidden">Aliev.dev</div>
+                <div className="ml-4 lg:hidden ">Aliev.dev</div>
                 <div onClick={handleNav} className="mr-4 lg:hidden">
                     {open ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                 </div>
                 <ul
                     className={
                         open
-                            ? 'text-center fixed left-0 top-16 w-full max-h-max border-r border-r-gray-900 bg-white ease-in-out duration-500 lg:hidden'
+                            ? 'text-center fixed left-0 top-16 w-full max-h-max border-r bg-white dark:bg-gray-900 ease-in-out duration-500 lg:hidden'
                             : 'ease-in-out text-center w-full h-1/2 duration-500 fixed top-[-100%]'
                     }
                 >
@@ -90,9 +107,10 @@ const Navbar = () => {
                             activeClass="active"
                             className="cursor-pointer"
                             to="content"
+                            spy={true}
                             smooth={true}
                             duration={500}
-                            offset={-250}
+                            offset={-150}
                             onClick={handleNav}
                         >
                             Home
