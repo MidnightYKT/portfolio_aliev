@@ -14,7 +14,7 @@ const Navbar = ({ handleThemeSwitch }) => {
             <div className="mx-auto max-w-[1000px] bg-white dark:bg-gray-900  px-0 flex justify-between items-center h-16 font-mono text-lg font-bold md:px-2 lg:px-0">
                 <div className="hidden lg:flex">
                     <Scroll
-                        className="cursor-pointer py-4 hover:text-blue-700"
+                        className="cursor-pointer py-4"
                         to="content"
                         smooth={true}
                         duration={500}
@@ -31,7 +31,7 @@ const Navbar = ({ handleThemeSwitch }) => {
                         <li className="p-5">
                             <Scroll
                                 activeClass="active"
-                                className="cursor-pointer hover:text-blue-700"
+                                className="cursor-pointer"
                                 to="content"
                                 spy={true}
                                 smooth={true}
@@ -48,7 +48,7 @@ const Navbar = ({ handleThemeSwitch }) => {
                                 smooth={true}
                                 duration={500}
                                 offset={-110}
-                                className="cursor-pointer hover:text-blue-700"
+                                className="cursor-pointer"
                             >
                                 About
                             </Scroll>
@@ -56,7 +56,7 @@ const Navbar = ({ handleThemeSwitch }) => {
                         <li className="p-5">
                             <Scroll
                                 to="projects"
-                                className="cursor-pointer hover:text-blue-700"
+                                className="cursor-pointer"
                                 spy={true}
                                 smooth={true}
                                 offset={-80}
@@ -71,25 +71,36 @@ const Navbar = ({ handleThemeSwitch }) => {
                                 spy={true}
                                 smooth={true}
                                 duration={500}
-                                className="cursor-pointer hover:text-blue-700"
+                                className="cursor-pointer"
                             >
                                 Contact
                             </Scroll>
                         </li>
                     </ul>
                 </nav>
-                <div className="ml-4 lg:hidden ">Aliev.dev</div>
+                <div className="ml-14 lg:hidden">Aliev.dev</div>
                 <div onClick={handleNav} className="mr-4 lg:hidden">
-                    {open ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+                    {open ? (
+                        <div className="flex">
+                            <MdOutlineDarkMode
+                                size={20}
+                                onClick={handleThemeSwitch}
+                                className="mr-3"
+                            />
+                            <AiOutlineClose size={20} />
+                        </div>
+                    ) : (
+                        <AiOutlineMenu size={20} />
+                    )}
                 </div>
                 <ul
                     className={
                         open
-                            ? 'text-center fixed left-0 top-16 w-full max-h-max border-r bg-white dark:bg-gray-900 ease-in-out duration-500 lg:hidden'
+                            ? 'text-center fixed left-0 top-16 w-full max-h-max border-r bg-white dark:bg-gray-900 duration-100 lg:hidden'
                             : 'ease-in-out text-center w-full h-1/2 duration-500 fixed top-[-100%]'
                     }
                 >
-                    <li className="p-3 hover:border-blue-500">
+                    <li className="p-3">
                         <Scroll
                             activeClass="active"
                             className="cursor-pointer"
@@ -103,7 +114,7 @@ const Navbar = ({ handleThemeSwitch }) => {
                             Home
                         </Scroll>
                     </li>
-                    <li className="p-3 hover:border-blue-500">
+                    <li className="p-3">
                         <Scroll
                             to="about"
                             spy={true}
@@ -116,7 +127,7 @@ const Navbar = ({ handleThemeSwitch }) => {
                             About
                         </Scroll>
                     </li>
-                    <li className="p-3 hover:border-blue-500">
+                    <li className="p-3">
                         <Scroll
                             to="projects"
                             className="cursor-pointer"
@@ -129,7 +140,7 @@ const Navbar = ({ handleThemeSwitch }) => {
                             Projects
                         </Scroll>
                     </li>
-                    <li className="p-3 hover:border-blue-500">
+                    <li className="p-3">
                         <Scroll
                             to="contact"
                             spy={true}

@@ -5,7 +5,6 @@ function App() {
     const [theme, setTheme] = useState('white')
     useEffect(() => {
         if (theme === 'dark') {
-            console.log(theme)
             document.documentElement.classList.add('dark')
         } else {
             document.documentElement.classList.remove('dark')
