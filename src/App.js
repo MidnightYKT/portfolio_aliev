@@ -26,10 +26,35 @@ function App() {
     return (
         <>
             {loading ? (
-                <div className="w-full h-screen bg-black">
-                    <video className="w-full h-full" src={videoRaccon} autoPlay loop muted />
+                <div className="w-full h-screen bg-black flex justify-center items-center">
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: `<video
+                  loop
+                  muted
+                  autoplay
+                  playsinline
+                  className="w-full h-[full]"
+                >
+                    <source src=${videoRaccon} type="video/mp4" />
+                </video>
+                `,
+                        }}
+                        className="w-1/2 md:w-1/4 h-1/4 md:h-1/2"
+                    />
                 </div>
             ) : (
+                // <div className="w-full h-screen bg-black">
+                //     <video
+                //         className="w-full h-full"
+                //         src={videoRaccon}
+                //         autoPlay
+                //         loop
+                //         muted
+                //         playsInline
+                //         type="video/mp4"
+                //     />
+                // </div>
                 <div className="bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white duration-500">
                     <Navbar handleThemeSwitch={handleThemeSwitch} theme={theme} />
                     <Content />
