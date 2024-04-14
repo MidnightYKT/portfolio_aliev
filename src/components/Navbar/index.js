@@ -74,11 +74,11 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
                             </Scroll>
                         </li>
                         {theme === 'dark' ? (
-                            <li className="p-5 cursor-pointer">
+                            <li className="py-5 pl-5 cursor-pointer">
                                 <MdOutlineLightMode size={26} onClick={handleThemeSwitch} />
                             </li>
                         ) : (
-                            <li className="p-5 cursor-pointer">
+                            <li className="py-5 pl-5 cursor-pointer">
                                 <MdOutlineDarkMode size={26} onClick={handleThemeSwitch} />
                             </li>
                         )}
@@ -108,8 +108,8 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
                 <ul
                     className={
                         open
-                            ? 'text-center fixed left-0 top-16 w-full max-h-max border-r bg-white dark:bg-gray-900 duration-100 lg:hidden'
-                            : 'ease-in-out text-center w-full h-1/2  duration-500 fixed top-[-100%]'
+                            ? 'text-center fixed left-0 top-16 w-full max-h-max bg-white dark:bg-gray-900 duration-500 lg:hidden'
+                            : 'ease-in-out text-center w-full h-1/2 duration-500 fixed top-[-100%]'
                     }
                 >
                     <li className="p-3">
