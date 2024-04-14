@@ -5,6 +5,8 @@ module.exports = {
     theme: {
         extend: {
             screens: {
+                sm3: '375px',
+                sm2: '425px',
                 lgb: '1080px',
             },
             boxShadow: {
