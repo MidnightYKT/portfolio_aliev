@@ -47,7 +47,7 @@ const About = ({ theme }) => {
                         </motion.div>
                     )}
                 </div>
-                <div className="lg:w-[37%] text-left mt-14 lg:mt-0">
+                <div className="lg:w-[37%] text-left mt-5 lg:mt-0">
                     <p className="mb-3 font-black text-[#147efb]">ABOUT ME</p>
                     <p className="my-3 font-extrabold text-lg">
                         A dedicated Front-end React Developer based in Seattle, WA

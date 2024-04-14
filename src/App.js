@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Navbar, Content, About, Projects, Contact, Footer } from './components/index'
+import videoRaccon from './assets/video/videoRacconPedro.mp4'
 
 function App() {
     const [theme, setTheme] = useState('white')
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
         if (theme === 'dark') {
             document.documentElement.classList.add('dark')
@@ -11,18 +13,33 @@ function App() {
         }
     }, [theme])
 
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 4000)
+    }, [])
+
     const handleThemeSwitch = () => {
         setTheme(theme === 'dark' ? 'white' : 'dark')
     }
     return (
-        <div className="bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white">
-            <Navbar handleThemeSwitch={handleThemeSwitch} theme={theme} />
-            <Content />
-            <About theme={theme} />
-            <Projects />
-            <Contact />
-            <Footer />
-        </div>
+        <>
+            {loading ? (
+                <div className="w-full h-screen bg-black">
+                    <video className="w-full h-full" src={videoRaccon} autoPlay loop muted />
+                </div>
+            ) : (
+                <div className="bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white duration-500">
+                    <Navbar handleThemeSwitch={handleThemeSwitch} theme={theme} />
+                    <Content />
+                    <About theme={theme} />
+                    <Projects />
+                    <Contact />
+                    <Footer />
+                </div>
+            )}
+        </>
     )
 }
 
