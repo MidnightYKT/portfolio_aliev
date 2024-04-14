@@ -16,7 +16,7 @@ function App() {
     }
     return (
         <div className="bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white">
-            <Navbar handleThemeSwitch={handleThemeSwitch} />
+            <Navbar handleThemeSwitch={handleThemeSwitch} theme={theme} />
             <Content />
             <About theme={theme} />
             <Projects />

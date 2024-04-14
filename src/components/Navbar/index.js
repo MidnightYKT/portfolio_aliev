@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
-import { MdOutlineDarkMode } from 'react-icons/md'
+import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md'
 import { Link as Scroll } from 'react-scroll'
 
-const Navbar = ({ handleThemeSwitch }) => {
+const Navbar = ({ handleThemeSwitch, theme }) => {
     const [open, setOpen] = useState(false)
     const handleNav = () => {
         setOpen(!open)
@@ -25,9 +25,6 @@ const Navbar = ({ handleThemeSwitch }) => {
                 </div>
                 <nav className="navbar">
                     <ul className="hidden lg:flex">
-                        <li className="p-5 cursor-pointer">
-                            <MdOutlineDarkMode size={26} onClick={handleThemeSwitch} />
-                        </li>
                         <li className="p-5">
                             <Scroll
                                 activeClass="active"
@@ -76,22 +73,37 @@ const Navbar = ({ handleThemeSwitch }) => {
                                 Contact
                             </Scroll>
                         </li>
+                        {theme === 'dark' ? (
+                            <li className="p-5 cursor-pointer">
+                                <MdOutlineLightMode size={26} onClick={handleThemeSwitch} />
+                            </li>
+                        ) : (
+                            <li className="p-5 cursor-pointer">
+                                <MdOutlineDarkMode size={26} onClick={handleThemeSwitch} />
+                            </li>
+                        )}
                     </ul>
                 </nav>
-                <div className="ml-14 lg:hidden">Aliev.dev</div>
-                <div onClick={handleNav} className="mr-4 lg:hidden">
-                    {open ? (
-                        <div className="flex">
-                            <MdOutlineDarkMode
-                                size={20}
-                                onClick={handleThemeSwitch}
-                                className="mr-3"
-                            />
-                            <AiOutlineClose size={20} />
-                        </div>
-                    ) : (
-                        <AiOutlineMenu size={20} />
-                    )}
+                <div className="ml-16 lg:hidden">Aliev.dev</div>
+                <div className="flex lg:hidden">
+                    <div className="mr-3">
+                        {theme === 'dark' ? (
+                            <MdOutlineLightMode size={21} onClick={handleThemeSwitch} />
+                        ) : (
+                            <MdOutlineDarkMode size={21} onClick={handleThemeSwitch} />
+                        )}
+                    </div>
+                    <div onClick={handleNav} className="mr-4 lg:hidden">
+                        {open ? (
+                            <div>
+                                <AiOutlineClose size={20} />
+                            </div>
+                        ) : (
+                            <div>
+                                <AiOutlineMenu size={20} />
+                            </div>
+                        )}
+                    </div>
                 </div>
                 <ul
                     className={
