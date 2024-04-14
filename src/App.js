@@ -44,17 +44,6 @@ function App() {
                     />
                 </div>
             ) : (
-                // <div className="w-full h-screen bg-black">
-                //     <video
-                //         className="w-full h-full"
-                //         src={videoRaccon}
-                //         autoPlay
-                //         loop
-                //         muted
-                //         playsInline
-                //         type="video/mp4"
-                //     />
-                // </div>
                 <div className="bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white duration-500">
                     <Navbar handleThemeSwitch={handleThemeSwitch} theme={theme} />
                     <Content />

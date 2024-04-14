@@ -11,7 +11,7 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
 
     return (
         <div className="sticky top-0 z-40 shadow-md" id="bs-example-navbar-collapse-1">
-            <div className="mx-auto max-w-[1000px] bg-white dark:bg-gray-900  px-0 flex justify-between items-center h-16 font-mono text-lg font-bold md:px-2 lg:px-0">
+            <div className="mx-auto max-w-[1000px] bg-white dark:bg-gray-900 duration-500  px-0 flex justify-between items-center h-16 font-mono text-lg font-bold md:px-2 lg:px-0">
                 <div className="hidden lg:flex">
                     <Scroll
                         className="cursor-pointer py-4"
@@ -109,7 +109,7 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
                     className={
                         open
                             ? 'text-center fixed left-0 top-16 w-full max-h-max border-r bg-white dark:bg-gray-900 duration-100 lg:hidden'
-                            : 'ease-in-out text-center w-full h-1/2 duration-500 fixed top-[-100%]'
+                            : 'ease-in-out text-center w-full h-1/2  duration-500 fixed top-[-100%]'
                     }
                 >
                     <li className="p-3">
