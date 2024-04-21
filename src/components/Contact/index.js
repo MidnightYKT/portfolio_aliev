@@ -2,6 +2,7 @@ import React from 'react'
 import { TbLocationHeart } from 'react-icons/tb'
 import { LuMailSearch } from 'react-icons/lu'
 import { FaGithubAlt, FaLinkedinIn } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
     return (
@@ -38,7 +39,13 @@ const Contact = () => {
                     </div>
                     <div className="mt-4 flex w-[90%] sm3:w-[80%] sm2:w-[60%]">
                         <span className="p-4 rounded-full shadow-3xl">
-                            <FaGithubAlt size={40} className="text-blue-500" />
+                            <Link
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                to="https://github.com/MidnightYKT"
+                            >
+                                <FaGithubAlt size={40} className="text-blue-500" />
+                            </Link>
                         </span>
                         <div className="ml-3 md:ml-5 mt-2">
                             <p className="font-extrabold">GitHub</p>
@@ -54,7 +61,13 @@ const Contact = () => {
                     </div>
                     <div className="mt-4 flex w-[90%] sm3:w-[80%] sm2:w-[60%]">
                         <span className="p-4 rounded-full shadow-3xl">
-                            <FaLinkedinIn size={40} className="text-blue-500" />
+                            <Link
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                to="https://www.linkedin.com/in/bek-aliev-310a6a26a/"
+                            >
+                                <FaLinkedinIn size={40} className="text-blue-500" />
+                            </Link>
                         </span>
                         <div className="ml-3 md:ml-5 mt-2">
                             <p className="font-extrabold">Linkedin</p>
