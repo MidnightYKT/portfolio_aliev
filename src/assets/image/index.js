@@ -18,6 +18,7 @@ import ImgAboutTextDarkMode from '../image/About/imgAboutTextDarkMode.png'
 import ImgEmogi from '../image/About/imgAboutEmogi.png'
 
 //Projects
+import ProjectSendIt from '../image/Projects/sendIt.png'
 import ProjectRamen from '../image/Projects/project_ramen.png'
 import ProjectWeather from '../image/Projects/weatherReact.png'
 import ProjectTodo from '../image/Projects/todoReact.png'
@@ -39,6 +40,7 @@ export {
     ImgAboutLaptop,
     ImgAboutText,
     ImgAboutTextDarkMode,
+    ProjectSendIt,
     ProjectRamen,
     ProjectWeather,
     ProjectTodo,
