@@ -13,7 +13,7 @@ export const data = [
         description:
             'A CRUD application that allows you to share your small messages. Prisma and Postgresql were used as a backend with Next authentication to create and authenticate users.',
         image: ProjectSendIt,
-        url: 'https://react-store-ramen.vercel.app/',
+        url: 'https://nextjs-postit-psi.vercel.app/',
         tools: [
             {
                 id: 0,

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { data } from '../../data'
+import { Link } from 'react-router-dom'
 
 const Projects = () => {
     return (
@@ -21,35 +22,37 @@ const Projects = () => {
                                 className="duration-700 hover:scale-105 mt-7 p-3 md:p-5 lg:h-full lg:w-full shadow-3xl  rounded-xl dark:bg-gray-800"
                                 key={project.id}
                             >
-                                <div className="relative md:block">
-                                    <div className="shadow-3xl">
-                                        <a target="_blank" rel="noreferrer" href={project.url}>
+                                <Link target="_blank" rel="noopener noreferrer" to={project.url}>
+                                    <div className="relative md:block">
+                                        <div className="shadow-3xl">
                                             <img
                                                 src={project.image}
                                                 alt=""
-                                                className="w-full h-full lg:max-h-[300px] max-w-7xl rounded-lg"
+                                                className="w-full h-full max-h-[300px] max-w-7xl rounded-lg"
                                             />
-                                        </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className=" text-center py-5 lg:px-10 lg:mt-0 ml-3">
-                                    <p className="mb-3 font-extrabold text-lg">{project.title}</p>
-                                    <p className="my-3 font-medium text-lg italic dark:text-zinc-400">
-                                        {project.description}
-                                    </p>
-                                    <div className="grid gap-x-2 gap-y-4 grid-cols-2 md:grid-cols-3 place-items-center mt-8 md:mt-14">
-                                        {project.tools.map((tool) => (
-                                            <div
-                                                className="rounded-xl bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg duration-500 hover:scale-110"
-                                                key={tool.id}
-                                            >
-                                                <p className="font-bold bg-white px-3 py-2 rounded-xl dark:text-black">
-                                                    {tool.name}
-                                                </p>
-                                            </div>
-                                        ))}
+                                    <div className=" text-center py-5 lg:px-10 lg:mt-0 ml-3">
+                                        <p className="mb-3 font-extrabold text-lg">
+                                            {project.title}
+                                        </p>
+                                        <p className="my-3 font-medium text-lg italic dark:text-zinc-400">
+                                            {project.description}
+                                        </p>
+                                        <div className="grid gap-x-2 gap-y-4 grid-cols-2 md:grid-cols-3 place-items-center mt-8 md:mt-14">
+                                            {project.tools.map((tool) => (
+                                                <div
+                                                    className="rounded-xl bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg duration-500 hover:scale-110"
+                                                    key={tool.id}
+                                                >
+                                                    <p className="font-bold bg-white px-3 py-2 rounded-xl dark:text-black">
+                                                        {tool.name}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             </div>
                         ))}
                     </div>
