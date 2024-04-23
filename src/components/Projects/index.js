@@ -28,7 +28,7 @@ const Projects = () => {
                                             <img
                                                 src={project.image}
                                                 alt=""
-                                                className="w-full h-full max-h-[300px] max-w-7xl rounded-lg"
+                                                className="w-full h-full max-h-[300px] max-w-7xl"
                                             />
                                         </div>
                                     </div>
