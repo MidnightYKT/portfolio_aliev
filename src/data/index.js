@@ -97,7 +97,7 @@ export const data = [
         id: 2,
         title: 'WEATHER APP',
         description:
-            'The weather app provides access to current weather conditions, including temperature, precipitation, wind speed, humidity, sunrise and sunset times, air pressure, feel like and visibility.',
+            'The weather app provides access to current weather conditions, including temperature, precipitation, wind speed, humidity, sunrise and sunset times, air pressure, feel like and visibility. The weather API was taken from www.weatherapi.com',
         image: ProjectWeather,
         github: 'https://github.com/MidnightYKT/weather-app',
         url: 'https://weather-app-three-gamma-31.vercel.app/',
@@ -118,7 +118,7 @@ export const data = [
     },
     {
         id: 3,
-        title: 'KANBAN REACT',
+        title: 'REACT KANBAN',
         description:
             'The Kanban Board React.js application is a dynamic project designed to streamline task management and enhance productivity. Developed with the modern web technology of React.js, this application serves as a visual project management tool.',
         image: PorjectKanban,
