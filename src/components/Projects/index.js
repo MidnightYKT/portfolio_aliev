@@ -2,6 +2,7 @@ import React from 'react'
 
 import { data } from '../../data'
 import { Link } from 'react-router-dom'
+import ProjectModal from './modal/ProjectModal'
 
 const Projects = () => {
     return (
@@ -26,7 +27,7 @@ const Projects = () => {
                                     <img
                                         src={project.image}
                                         alt=""
-                                        className="w-full h-full max-w-7xl lg:max-h-[200px] rounded-xl"
+                                        className="w-full h-full max-w-7xl lg:max-h-[205px] rounded-xl"
                                     />
                                 </div>
                                 <div className="text-center pt-3 px-0 lg:px-5">
@@ -40,17 +41,7 @@ const Projects = () => {
                                         >
                                             GitHub
                                         </Link>
-                                        {/* <button className="cursor-pointer border border-slate-600 p-1 lg:p-2 rounded-lg ">
-                                            Info
-                                        </button> */}
-                                        <Link
-                                            className="cursor-pointer border border-slate-600 p-3 rounded-lg"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            to={project.url}
-                                        >
-                                            Live Demo
-                                        </Link>
+                                        <ProjectModal project={project} />
                                     </div>
                                     {/* <p className="my-3 font-medium text-lg italic dark:text-zinc-400">
                                         {project.description}
