@@ -9,10 +9,11 @@ import {
 export const data = [
     {
         id: 0,
-        title: 'React Send It',
+        title: 'REACT SEND IT',
         description:
             'A CRUD application that allows you to share your small messages. Prisma and Postgresql were used as a backend with Next authentication to create and authenticate users.',
         image: ProjectSendIt,
+        github: 'https://github.com/MidnightYKT/nextjs-postit',
         url: 'https://nextjs-postit-psi.vercel.app/',
         tools: [
             {
@@ -63,6 +64,7 @@ export const data = [
         description:
             'This is my mini online store for ordering ramen. In which I practiced using Redux, Axios, MockaApi and Typescript.',
         image: ProjectRamen,
+        github: 'https://github.com/MidnightYKT/react-store-ramen',
         url: 'https://react-store-ramen.vercel.app/',
         tools: [
             {
@@ -97,6 +99,7 @@ export const data = [
         description:
             'The weather app provides access to current weather conditions, including temperature, precipitation, wind speed, humidity, sunrise and sunset times, air pressure, feel like and visibility.',
         image: ProjectWeather,
+        github: 'https://github.com/MidnightYKT/weather-app',
         url: 'https://weather-app-three-gamma-31.vercel.app/',
         tools: [
             {
@@ -119,6 +122,7 @@ export const data = [
         description:
             'The Kanban Board React.js application is a dynamic project designed to streamline task management and enhance productivity. Developed with the modern web technology of React.js, this application serves as a visual project management tool.',
         image: PorjectKanban,
+        github: 'https://github.com/MidnightYKT/kanban-board',
         url: 'https://kanban-board-iota-beige.vercel.app/',
         tools: [
             {
@@ -145,6 +149,7 @@ export const data = [
         description:
             'An application made to manage your tasks by providing an interfacefor adding, editing the mark of whether a task is done or not and deleting tasks.',
         image: ProjectTodo,
+        github: 'https://github.com/MidnightYKT/todo-r',
         url: 'https://todo-r-theta.vercel.app/',
         tools: [
             {
