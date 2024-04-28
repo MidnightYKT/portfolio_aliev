@@ -3,13 +3,17 @@ import { Navbar, Content, About, Projects, Contact, Footer } from './components/
 import videoRaccon from './assets/video/videoRacconPedro.mp4'
 
 function App() {
-    const [theme, setTheme] = useState('white')
+    const [theme, setTheme] = useState(
+        localStorage.getItem('theme') ? localStorage.getItem('theme') : 'system'
+    )
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         if (theme === 'dark') {
             document.documentElement.classList.add('dark')
+            localStorage.setItem('theme', 'dark')
         } else {
             document.documentElement.classList.remove('dark')
+            localStorage.setItem('theme', 'white')
         }
     }, [theme])
 

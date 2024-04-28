@@ -56,8 +56,8 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
                                 className="cursor-pointer"
                                 spy={true}
                                 smooth={true}
-                                offset={-80}
-                                duration={500}
+                                offset={-100}
+                                duration={800}
                             >
                                 Projects
                             </Scroll>
