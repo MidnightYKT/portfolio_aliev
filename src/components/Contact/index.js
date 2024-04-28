@@ -16,7 +16,16 @@ const Contact = () => {
                 <div className="mt-10 h-full grid justify-items-center md:grid-cols-2 gap-4 md:w-full">
                     <div className="mt-4 flex w-[90%] sm3:w-[80%] sm2:w-[60%]">
                         <span className="p-4 rounded-full shadow-3xl">
-                            <TbLocationHeart size={40} className="text-blue-500" />
+                            <Link
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                to="https://www.google.com/search?gs_ssp=eJzj4tDP1TdIscwqMmD0Yi9OTSwpyUkFADc-Bfs&q=seattle&rlz=1C1ONGR_enUS1048US1049&oq=seatle&gs_lcrp=EgZjaHJvbWUqCQgBEC4YChiABDIGCAAQRRg5MgkIARAuGAoYgAQyBggCEEUYQDIJCAMQLhgKGIAEMgkIBBAAGAoYgAQyDwgFEC4YChjHARjRAxiABDIPCAYQLhgKGMcBGNEDGIAEMgkIBxAuGAoYgATSAQgzMzg5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+                            >
+                                <TbLocationHeart
+                                    size={40}
+                                    className="text-blue-500 duration-500 hover:scale-125"
+                                />
+                            </Link>
                         </span>
                         <div className="ml-3 md:ml-5 mt-2">
                             <p className="font-extrabold">Location</p>
@@ -25,7 +34,12 @@ const Contact = () => {
                     </div>
                     <div className="mt-4 flex w-[90%] sm3:w-[80%] sm2:w-[60%]">
                         <span className="p-4 rounded-full shadow-3xl">
-                            <LuMailSearch size={40} className="text-blue-500" />
+                            <Link to="mailto:nomiamaykt@gmail.com">
+                                <LuMailSearch
+                                    size={40}
+                                    className="text-blue-500 duration-500 hover:scale-125"
+                                />
+                            </Link>
                         </span>
                         <div className="ml-3 md:ml-5 mt-2">
                             <p className="font-extrabold">Mail</p>
@@ -44,7 +58,10 @@ const Contact = () => {
                                 rel="noopener noreferrer"
                                 to="https://github.com/MidnightYKT"
                             >
-                                <FaGithubAlt size={40} className="text-blue-500" />
+                                <FaGithubAlt
+                                    size={40}
+                                    className="text-blue-500 duration-500 hover:scale-125"
+                                />
                             </Link>
                         </span>
                         <div className="ml-3 md:ml-5 mt-2">
@@ -66,7 +83,10 @@ const Contact = () => {
                                 rel="noopener noreferrer"
                                 to="https://www.linkedin.com/in/bek-aliev-310a6a26a/"
                             >
-                                <FaLinkedinIn size={40} className="text-blue-500" />
+                                <FaLinkedinIn
+                                    size={40}
+                                    className="text-blue-500 duration-500 hover:scale-125"
+                                />
                             </Link>
                         </span>
                         <div className="ml-3 md:ml-5 mt-2">

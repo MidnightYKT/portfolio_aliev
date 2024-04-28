@@ -17,14 +17,14 @@ const ProjectModal = ({ project }) => {
     return (
         <>
             <button
-                className="cursor-pointer border border-slate-600 p-3 rounded-lg"
+                className="cursor-pointer border border-slate-600 p-3 rounded-lg "
                 onClick={showModal}
             >
                 Information
             </button>
 
             <Modal
-                title={<p className=" font-semibold ">{project.title}</p>}
+                title={<p className="text-lg font-semibold">{project.title}</p>}
                 open={open}
                 onCancel={handleCancel}
                 footer={[
@@ -36,8 +36,8 @@ const ProjectModal = ({ project }) => {
                 ]}
             >
                 <img src={project.image} alt="" className="w-full h-full max-w-7xl rounded-xl" />
-                <p className="my-3 dark:text-zinc-400 text-justify italic">{project.description}</p>
-                <p className="font-medium text-justify italic">
+                <p className="my-3 font-semibold text-justify italic">{project.description}</p>
+                <p className="font-semibold text-justify italic">
                     Tech used:{' '}
                     {project.tools.map((tool) => (
                         <span key={tool.id}>
