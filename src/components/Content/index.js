@@ -14,6 +14,7 @@ import {
     ImgRedux,
     ImgFramerMotion,
 } from '../../assets/image'
+import { TypeAnimation } from 'react-type-animation'
 
 const img = [
     ImgHtml,
@@ -45,8 +46,19 @@ const Content = () => {
                                         />
                                     </p>
                                     <div className="font-normal text-gray-600 dark:text-zinc-400 text-lg lg:mt-6 lg: mb-2">
-                                        Hi, I'm Bek Aliev. A dedicated Front-end React Developer
-                                        based in Seattle, WA
+                                        Hi, I'm Bek Aliev. A dedicated
+                                        <TypeAnimation
+                                            sequence={[
+                                                ' Front-end React Developer based in Seattle, WA',
+                                                1000,
+                                                ' Front-end',
+                                                1000,
+                                            ]}
+                                            wrapper="span"
+                                            speed={50}
+                                            repeat={Infinity}
+                                            cursor={true}
+                                        />
                                     </div>
                                     <div className="flex justify-start mt-2 md:mt-0">
                                         <a
