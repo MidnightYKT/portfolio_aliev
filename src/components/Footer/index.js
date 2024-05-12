@@ -1,9 +1,11 @@
 import React from 'react'
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
 
+//bg-[#2d2e32]
+
 const Footer = () => {
     return (
-        <div className="bg-[#2d2e32] w-full" id="footer">
+        <div className="w-full bg-[#2d2e32]" id="footer">
             <div className="mx-auto max-w-[1000px] text-white py-8">
                 <div className="md:flex justify-between mx-2 lg:mx-0">
                     <div className="text-center md:flex-none font-mono font-semibold text-xl">
