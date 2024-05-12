@@ -36,7 +36,7 @@ const Content = () => {
                     <div className="flex flex-col-reverse md:flex-row">
                         <div className="lg:basis-[60%]">
                             <div className="md:py-12 text-left lg:pt-14 lg:w-[83%]">
-                                <div className="not-italic font-bold pt-8 lg:pr-8 text-2xl xl:leading-[68px] lg:text-6xl">
+                                <div className="not-italic font-bold text-center md:text-left pt-8 lg:pr-8 text-4xl xl:leading-[68px] lg:text-6xl">
                                     <p>
                                         Front-End React Developer
                                         <img
@@ -45,11 +45,11 @@ const Content = () => {
                                             className="w-7 h-7 lg:w-12 lg:h-12 inline lg:ml-3 lg:mb-2 duration-500 hover:scale-125"
                                         />
                                     </p>
-                                    <div className="font-normal text-gray-600 dark:text-zinc-400 text-lg lg:mt-6 lg: mb-2">
+                                    <div className="font-normal h-20 md:w-96 lg:w-full text-gray-600 dark:text-zinc-400 text-lg mt-3 lg:mt-6">
                                         Hi, I'm Bek Aliev. A dedicated
                                         <TypeAnimation
                                             sequence={[
-                                                ' Front-end React Developer based in Seattle, WA',
+                                                ' Front-end React Developer based in Seattle, WA. 📍',
                                                 1000,
                                                 ' Front-end',
                                                 1000,
@@ -60,7 +60,7 @@ const Content = () => {
                                             cursor={true}
                                         />
                                     </div>
-                                    <div className="flex justify-start mt-2 md:mt-0">
+                                    <div className="flex justify-center md:justify-start mt-2 md:mt-0">
                                         <a
                                             href="https://www.linkedin.com/in/bek-aliev-310a6a26a/"
                                             target="_blank"
@@ -80,6 +80,7 @@ const Content = () => {
                                             href="https://github.com/MidnightYKT"
                                             target="_blank"
                                             rel="noreferrer"
+                                            className="ml-2"
                                         >
                                             <AiFillGithub
                                                 size={35}
@@ -95,7 +96,7 @@ const Content = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="container mx-auto px-8 pt-5 md:pt-10 lg:w-[35%] lg:mr-6 lg:h-[45%] lg:pt-10">
+                        <div className="container mx-auto px-8 pt-5 md:pt-10 md:w-[50%] md:h-full lg:w-[35%] lg:mr-6 lg:h-[45%] lg:pt-10">
                             <img
                                 src={ImgAvatar}
                                 alt=""
