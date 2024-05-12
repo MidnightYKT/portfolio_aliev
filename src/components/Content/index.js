@@ -6,6 +6,7 @@ import {
     ImgHtml,
     ImgCss,
     ImgJavaScript,
+    ImgTypeScript,
     ImgReact,
     ImgTailwind,
     ImgSass,
@@ -20,6 +21,7 @@ const img = [
     ImgHtml,
     ImgCss,
     ImgJavaScript,
+    ImgTypeScript,
     ImgReact,
     ImgTailwind,
     ImgSass,
@@ -108,7 +110,7 @@ const Content = () => {
                         <div className="w-1/2 md:w-max mx-auto md:m-0 text-center md:text-left font-bold text-base py-4 pr-3 mb-3 md:mb-0 border-b-2 md:border-b-0 border-r-0 md:border-r-2 ">
                             Tech Stack
                         </div>
-                        <ul className="grid grid-cols-3 justify-items-center mt-8 md:mt-0 md:flex flex-wrap gap-8 md:gap-4 py-2 md:grid-cols-none">
+                        <ul className="grid grid-cols-4 justify-items-center mt-8 md:mt-0 md:flex flex-wrap gap-8 md:gap-4 py-2 md:grid-cols-none">
                             {img.map((item, i) => (
                                 <li
                                     className="w-10 h-10 md:ml-5 duration-500 hover:scale-125"

@@ -3,6 +3,7 @@ import ImgAvatar from '../image/Content/imgAvatar.jpg'
 import ImgHtml from '../image/Content/imgHtml.png'
 import ImgCss from '../image/Content/imgCss.png'
 import ImgJavaScript from '../image/Content/imgJavascript.png'
+import ImgTypeScript from '../image/Content/ImgTypescript.png'
 import ImgReact from '../image/Content/imgReact.png'
 import ImgTailwind from '../image/Content/imgTailwind.png'
 import ImgSass from '../image/Content/imgSass.png'
@@ -29,6 +30,7 @@ export {
     ImgHtml,
     ImgCss,
     ImgJavaScript,
+    ImgTypeScript,
     ImgReact,
     ImgTailwind,
     ImgSass,
