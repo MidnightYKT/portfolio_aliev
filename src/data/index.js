@@ -65,7 +65,7 @@ export const data = [
             'This is my mini online store for ordering ramen. In which I practiced using Redux, Axios, MockaApi and Typescript.',
         image: ProjectRamen,
         github: 'https://github.com/MidnightYKT/react-store-ramen',
-        url: 'https://react-store-ramen.vercel.app/',
+        url: 'https://react-store-ramen-five.vercel.app/',
         tools: [
             {
                 id: 0,

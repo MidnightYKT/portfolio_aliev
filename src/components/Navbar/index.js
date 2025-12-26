@@ -11,10 +11,10 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
 
     return (
         <div className="sticky top-0 z-40 shadow-md" id="bs-example-navbar-collapse-1">
-            <div className="mx-auto max-w-[1000px] bg-white dark:bg-gray-900 duration-500  px-0 flex justify-between items-center h-16 font-mono text-lg font-bold md:px-2 lg:px-0">
+            <div className="mx-auto max-w-[1000px] bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white transition-colors duration-500 px-0 flex justify-between items-center h-16 font-mono text-lg font-bold md:px-2 lg:px-0">
                 <div className="hidden lg:flex">
                     <Scroll
-                        className="cursor-pointer py-4"
+                        className="cursor-pointer py-4 transition-colors duration-500"
                         to="content"
                         smooth={true}
                         duration={500}
@@ -74,23 +74,23 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
                             </Scroll>
                         </li>
                         {theme === 'dark' ? (
-                            <li className="py-5 pl-5 cursor-pointer">
-                                <MdOutlineLightMode size={26} onClick={handleThemeSwitch} />
+                            <li className="py-5 pl-5 cursor-pointer transition-colors duration-500">
+                                <MdOutlineLightMode size={26} onClick={handleThemeSwitch} className="transition-colors duration-500" />
                             </li>
                         ) : (
-                            <li className="py-5 pl-5 cursor-pointer">
-                                <MdOutlineDarkMode size={26} onClick={handleThemeSwitch} />
+                            <li className="py-5 pl-5 cursor-pointer transition-colors duration-500">
+                                <MdOutlineDarkMode size={26} onClick={handleThemeSwitch} className="transition-colors duration-500" />
                             </li>
                         )}
                     </ul>
                 </nav>
-                <div className="ml-16 lg:hidden">Aliev.dev</div>
+                <div className="ml-16 lg:hidden transition-colors duration-500">Aliev.dev</div>
                 <div className="flex lg:hidden">
-                    <div className="mr-3">
+                    <div className="mr-3 transition-colors duration-500">
                         {theme === 'dark' ? (
-                            <MdOutlineLightMode size={21} onClick={handleThemeSwitch} />
+                            <MdOutlineLightMode size={21} onClick={handleThemeSwitch} className="transition-colors duration-500" />
                         ) : (
-                            <MdOutlineDarkMode size={21} onClick={handleThemeSwitch} />
+                            <MdOutlineDarkMode size={21} onClick={handleThemeSwitch} className="transition-colors duration-500" />
                         )}
                     </div>
                     <div onClick={handleNav} className="mr-4 lg:hidden">
@@ -108,7 +108,7 @@ const Navbar = ({ handleThemeSwitch, theme }) => {
                 <ul
                     className={
                         open
-                            ? 'text-center fixed left-0 top-16 w-full max-h-max bg-white dark:bg-gray-900 duration-500 lg:hidden'
+                            ? 'text-center fixed left-0 top-16 w-full max-h-max bg-white dark:bg-gray-900 transition-colors duration-500 lg:hidden'
                             : 'ease-in-out text-center w-full h-1/2 duration-500 fixed top-[-100%]'
                     }
                 >

@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Navbar, Content, About, Projects, Contact, Footer } from './components/index'
-import videoRaccon from './assets/video/videoRacconPedro.mp4'
 
 function App() {
-    const [theme, setTheme] = useState(
-        localStorage.getItem('theme') ? localStorage.getItem('theme') : 'system'
-    )
-    const [loading, setLoading] = useState(false)
+    const initialTheme = localStorage.getItem('theme') || 'white'
+    const [theme, setTheme] = useState(initialTheme)
+    const [loading, setLoading] = useState(true)
+    
     useEffect(() => {
         if (theme === 'dark') {
             document.documentElement.classList.add('dark')
@@ -19,45 +18,80 @@ function App() {
 
     useEffect(() => {
         setLoading(true)
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             setLoading(false)
-        }, 3000)
+        }, 2000)
+        return () => clearTimeout(timer)
     }, [])
 
     const handleThemeSwitch = () => {
-        setTheme(theme === 'dark' ? 'white' : 'dark')
+        const newTheme = theme === 'dark' ? 'white' : 'dark'
+        // Применяем класс dark синхронно, до обновления состояния
+        if (newTheme === 'dark') {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+        setTheme(newTheme)
     }
+    
+    if (loading) {
+        const isDark = theme === 'dark'
+        return (
+            <div 
+                className="fixed inset-0 flex items-center justify-center z-50 transition-colors duration-500"
+                style={{ 
+                    backgroundColor: isDark ? '#111827' : '#ffffff'
+                }}
+            >
+                <div className="flex flex-col items-center gap-6 loading-animation">
+                    <div className="relative w-24 h-24">
+                        <div 
+                            className="absolute inset-0 border-4 rounded-full border-t-transparent animate-spin" 
+                            style={{ 
+                                animationDuration: '1s',
+                                borderColor: isDark ? '#60a5fa' : '#3b82f6',
+                                borderTopColor: 'transparent'
+                            }}
+                        ></div>
+                        <div 
+                            className="absolute inset-3 border-4 rounded-full border-b-transparent animate-spin" 
+                            style={{ 
+                                animationDirection: 'reverse', 
+                                animationDuration: '0.8s',
+                                borderColor: isDark ? '#a78bfa' : '#8b5cf6',
+                                borderBottomColor: 'transparent'
+                            }}
+                        ></div>
+                        <div 
+                            className="absolute inset-6 border-4 rounded-full border-l-transparent animate-spin" 
+                            style={{ 
+                                animationDuration: '1.2s',
+                                borderColor: isDark ? '#f472b6' : '#ec4899',
+                                borderLeftColor: 'transparent'
+                            }}
+                        ></div>
+                    </div>
+                    <div 
+                        className="text-2xl font-semibold animate-pulse"
+                        style={{ color: isDark ? '#ffffff' : '#2d2e32' }}
+                    >
+                        Loading...
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    
     return (
-        <>
-            {loading ? (
-                <div className="w-full h-screen bg-black flex justify-center items-center">
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: `<video
-                  loop
-                  muted
-                  autoplay
-                  playsinline
-                  className="w-full h-[full]"
-                >
-                    <source src=${videoRaccon} type="video/mp4" />
-                </video>
-                `,
-                        }}
-                        className="w-1/2 md:w-1/4 h-1/4 md:h-1/2"
-                    />
-                </div>
-            ) : (
-                <div className="bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white duration-500">
-                    <Navbar handleThemeSwitch={handleThemeSwitch} theme={theme} />
-                    <Content />
-                    <About theme={theme} />
-                    <Projects />
-                    <Contact />
-                    <Footer />
-                </div>
-            )}
-        </>
+        <div className="bg-white dark:bg-gray-900 text-[#2d2e32] dark:text-white transition-colors duration-500">
+            <Navbar handleThemeSwitch={handleThemeSwitch} theme={theme} />
+            <Content />
+            <About theme={theme} />
+            <Projects />
+            <Contact />
+            <Footer />
+        </div>
     )
 }
 

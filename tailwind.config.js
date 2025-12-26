@@ -14,6 +14,8 @@ module.exports = {
             },
             animation: {
                 wiggle: 'wiggle 20s infinite',
+                fadeIn: 'fadeIn 0.6s ease-out',
+                fadeInScale: 'fadeInScale 0.6s ease-out',
             },
             keyframes: {
                 wiggle: {
@@ -31,6 +33,14 @@ module.exports = {
                         borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
                         boxShadow: '15px 15px 50px rgba(0,0,0,0.2)',
                     },
+                },
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+                fadeInScale: {
+                    '0%': { opacity: '0', transform: 'scale(0.8)' },
+                    '100%': { opacity: '1', transform: 'scale(1)' },
                 },
             },
         },
