@@ -110,15 +110,29 @@ const Content = () => {
                         <div className="w-1/2 md:w-max mx-auto md:m-0 text-center md:text-left font-bold text-base py-4 pr-3 mb-3 md:mb-0 border-b-2 md:border-b-0 border-r-0 md:border-r-2 ">
                             Tech Stack
                         </div>
-                        <ul className="grid grid-cols-4 justify-items-center mt-8 md:mt-0 md:flex flex-wrap gap-8 md:gap-4 py-2 md:grid-cols-none">
-                            {img.map((item, i) => (
-                                <li
-                                    className="w-10 h-10 md:ml-5 duration-500 hover:scale-125"
-                                    key={i}
-                                >
-                                    <img src={item} alt="" className="w-full h-full " />
-                                </li>
-                            ))}
+                        <ul className="grid grid-cols-4 justify-items-center mt-8 md:mt-0 md:flex flex-wrap gap-8 md:gap-4 py-2 md:grid-cols-none md:justify-start">
+                            {img.map((item, i) => {
+                                const isBeforeSecondToLast = i === img.length - 3
+                                const isRedux = i === 8 // Redux index - должен быть под Tailwind (col 2)
+                                const isFramerMotion = i === 9 // FramerMotion index - должен быть под SCSS (col 3)
+                                
+                                const gridColumnClass = isRedux 
+                                    ? 'tech-stack-redux' 
+                                    : isFramerMotion 
+                                    ? 'tech-stack-framermotion' 
+                                    : ''
+                                
+                                return (
+                                    <React.Fragment key={i}>
+                                        {isBeforeSecondToLast && (
+                                            <li className="hidden md:block md:flex-1"></li>
+                                        )}
+                                        <li className={`w-10 h-10 duration-500 hover:scale-125 md:ml-5 ${gridColumnClass}`}>
+                                            <img src={item} alt="" className="w-full h-full " />
+                                        </li>
+                                    </React.Fragment>
+                                )
+                            })}
                         </ul>
                     </div>
                 </div>
